@@ -1,0 +1,25 @@
+Implement ASP.NET Core Web API CRUD Operation with ADO.NET Store Procedure and .NET 8.0:
+link: https://www.youtube.com/watch?v=0O_nitsEJW0
+
+Step-1: Select ASP.NET Core Web API
+		Uncheck Configure for HTTPs
+
+Step-2: Install 1 Packages
+			i)  System.Data.SqlClient
+			
+Step-3: Login in MS SQL Server Management Studio in SQL Server Authentication Mode with User Name & Password.
+			-- create database: CREATE DATABASE ProductApiADONETSP
+			-- create table: see Table Structure & Model.txt file
+			
+Step-4: Create a ConnectionStrings in appsettings.json file.
+		  "ConnectionStrings": {
+			"DefaultConnection": "Server=DESKTOP-SC1LO7R;Database=ProductApiADONET;User Id=sa; Password=rakib123"
+		  }
+		  
+Step-5: Create a Model to fetch the data.
+
+Step-6: Create a Store Procedure.
+
+Step-7: Add controller - API controller - API Controller empty
+			
+Step-8: Then CRUD operation occur.

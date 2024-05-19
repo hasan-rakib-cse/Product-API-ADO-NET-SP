@@ -1,0 +1,35 @@
+Database Structure:
+
+CREATE DATABASE ProductApiADONETSP
+
+Table Structure:
+
+CREATE TABLE Products (
+    Id INT PRIMARY KEY IDENTITY (1, 1) NOT NULL,
+    ProductName NVARCHAR (100) NOT NULL,
+    ProductCode NVARCHAR (30) NOT NULL,
+    SalePrice DECIMAL (18, 2) NOT NULL,
+    Brand NVARCHAR (100),
+	ProductWarranty INT,
+	CreatedDate DATETIME2(7) 
+);
+
+
+Model:
+	
+		public int Id { get; set; }
+
+        [Required, StringLength(50)]
+        public string ProductName { get; set; }
+
+        [Required, StringLength(30)]
+        public string ProductCode { get; set; }
+
+        [Required]
+        public decimal SalePrice { get; set; }
+		
+		public string Brand { get; set; }
+
+        public int ProductWarranty { get; set; }
+
+        public DateTime CreatedDate { get; set; }

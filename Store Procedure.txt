@@ -1,0 +1,34 @@
+CREATE PROCEDURE SP_CRUD_Products(
+	@action AS INT,
+    @Id AS INT,
+    @ProductName AS NVARCHAR (100),
+    @ProductCode AS NVARCHAR (30),
+    @SalePrice AS DECIMAL (18, 2),
+    @Brand AS NVARCHAR (100),
+	@ProductWarranty AS INT,
+	@CreatedDate AS DATETIME2(7)
+)
+AS
+BEGIN
+
+if(@action=1)
+Begin
+	insert into Products values (@ProductName, @ProductCode, @SalePrice, @Brand, @ProductWarranty, getdate())	
+End
+
+else if(@action=2)
+Begin
+	select * from Products order by Id desc
+End
+
+else if(@action=3)
+Begin
+	update Products set ProductName= @ProductName, ProductCode= @ProductCode, SalePrice= @SalePrice, Brand= @Brand, ProductWarranty= @ProductWarranty where id=@Id
+End
+
+else if(@action=4)
+Begin
+	delete from Products where id=@Id
+End
+
+END;
